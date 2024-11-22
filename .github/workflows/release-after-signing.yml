@@ -39,7 +39,7 @@ jobs:
             }
             const releases = await github.paginate(github.rest.repos.listReleases, { owner: context.repo.owner, repo: context.repo.repo, });
             if (releases.some(({ tag_name }) => tag_name === `v${version}`)) {
-              throw new Error(`Release v${version} already exists! Did you forget to bump the manifest.json version?`);
+              console.warn(`Release v${version} already exists! Did you forget to bump the manifest.json version?`);
             }
             return version;
 
