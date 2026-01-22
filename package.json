@@ -11,8 +11,8 @@
   },
   "devDependencies": {
     "eslint": "^8.57.1",
-    "nodemon": "^3.1.10",
-    "web-ext": "^9.1.0"
+    "nodemon": "^3.1.11",
+    "web-ext": "^9.2.0"
   },
   "webExt": {
     "ignoreFiles": [
