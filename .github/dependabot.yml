@@ -1,0 +1,26 @@
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    labels: [ ]
+    schedule:
+      interval: cron
+      cronjob: 0 17 5 * *
+    groups:
+      github-actions:
+        patterns:
+          - '*'
+
+  - package-ecosystem: npm
+    directory: /
+    labels: [ ]
+    schedule:
+      interval: cron
+      cronjob: 0 17 5 * *
+    groups:
+      npm-dependencies:
+        patterns:
+          - '*'
+        update-types:
+          - minor
+          - patch
